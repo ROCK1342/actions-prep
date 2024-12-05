@@ -3,7 +3,7 @@ name: workflow printing ascii #workflow name
 on: push #event trigger
 
 jobs:   #list of jobs
-   first-job:  #job name
+   ascii-job:  #job name
         runs-on: ubuntu-latest  #runs on ubuntu
         steps:  #steps to execute
           - name: checkout repo
