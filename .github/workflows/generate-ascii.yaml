@@ -28,5 +28,5 @@ jobs:   #list of jobs
 
           - name: execute shell script
             run: |
-               chmod +x
+               chmod +x ascii-script.sh
                ./ascii-script.sh
