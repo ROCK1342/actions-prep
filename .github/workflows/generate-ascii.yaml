@@ -13,10 +13,10 @@ jobs:   #list of jobs
             run: ls -ltra
 
 
-          - name: execute shell script       # proper path neede from root of repo for runner to access files
+          - name: execute shell script       # scripts should be in root repo for runner to access
             run: |
-              chmod +x .github/workflows/ascii-script.sh 
-              ./github/workflows/ascii-script.sh
+              chmod +x ascii-script.sh 
+              ./ascii-script.sh
 
 
 
