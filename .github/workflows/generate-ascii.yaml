@@ -1,0 +1,27 @@
+name: workflow printing ascii #workflow name
+
+on: push #event trigger
+
+jobs:   #list of jobs
+   first-job:  #job name
+        runs-on: ubuntu-latest  #runs on ubuntu
+        steps:  #steps to execute
+          - name: checkout repo
+            uses: actions/checkout@v4 #uses-- github marketplace action
+
+          - name: install cowsay  #install cowsay
+            run: |           #run multiline commands
+              echo "Installing Cowsay"  
+              sudo apt-get install cowsay -y
+
+          - name: Execute cowsay CMD
+            run: cowsay -f dragon "Rin for cover, Im a dragon..rawr" >> dragon.txt
+
+          - name: check if file exists 
+            run: grep -i "dragon" dragon.txt
+
+          - name: list files
+            run: ls -ltra
+
+          - name: read file
+            run: cat README.md 
